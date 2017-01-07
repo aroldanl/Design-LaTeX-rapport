@@ -1,0 +1,49 @@
+\documentclass[a4paper, 11pt,twoside=true]{scrartcl} % Remplace la classe "article", correspond au standard européen.
+\usepackage{Rapport2}
+%\usepackage[toc]{multitoc} double table des matières si nécessaire
+\clearpairofpagestyles
+
+
+%%% Paramètres
+
+\newcommand{\tit}{Titre du rapport}
+\newcommand{\nom}{Auteur}
+\newcommand{\superv}{Superviseur}
+\newcommand{\depa}{Département}
+
+\input{headtitre.tex}
+
+
+
+\begin{document}
+
+
+%%%%TITRE
+
+\maketitle
+
+\tableofcontents % table des matières
+\newpage
+
+%%%%%%% Début du docume
+
+\section{Introduction}
+\section{Théorie}
+\section{Méthode expérimentale}
+\section{Résultats et analyse}
+\section{Conclusion}
+
+
+
+\begin{thebibliography}{widest entry}
+\end{thebibliography}	
+
+
+
+%\section{Annexes}
+
+
+
+
+
+\end{document}
