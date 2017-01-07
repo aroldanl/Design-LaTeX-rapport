@@ -1,23 +1,23 @@
-\RequirePackage[automark,autooneside=false, footwidth=\the\textwidth]{scrlayer-scrpage}
-\RequirePackage[utf8]{inputenc}
+\RequirePackage[automark,autooneside=false, footwidth=\the\textwidth]{scrlayer-scrpage} % pour 
+\RequirePackage[utf8]{inputenc} 
 \RequirePackage[T1]{fontenc}
-\RequirePackage{newtxtext}
-\RequirePackage[fleqn]{amsmath}
-\RequirePackage[protrusion=true,expansion,auto]{microtype}
-\RequirePackage{ntheorem}
+\RequirePackage{newtxtext} % police
+\RequirePackage[fleqn]{amsmath} % amsmath avec équations un peu vers la gauche
+\RequirePackage[protrusion=true,expansion,auto]{microtype} % rendre typographie plus belle
+\RequirePackage{ntheorem} % environnement théorème
 \RequirePackage{etoolbox}
-\RequirePackage{tensor}
+\RequirePackage{tensor} % Pour afficher les tenseurs avec des espaces
 \RequirePackage{moresize}
-\RequirePackage{nuc}
-\RequirePackage{dingbat}
+\RequirePackage{nuc}  % Afficher isotopes p. ex. \Bi{207}
+\RequirePackage{dingbat} % des mains
 \RequirePackage[frenchb]{babel}
-\RequirePackage{import}
-\RequirePackage{cite}
-\RequirePackage{booktabs}
+\RequirePackage{import} % importer
+\RequirePackage{cite} % citer
+\RequirePackage{booktabs} % beaux tableaux
 \RequirePackage[subscriptcorrection,uprightGreek,zswash,nofontinfo,amssymbols,mtphrd]{mtpro2}
-\RequirePackage{bm}
-\RequirePackage{physics}
-\RequirePackage{caption}
+\RequirePackage{bm} % Vecteurs en gras
+\RequirePackage{physics} % Macros pour physiciens
+\RequirePackage{caption} % Légendes
 \RequirePackage{subcaption} % Légendes
 \RequirePackage{mathtools}
 \RequirePackage{stmaryrd}
@@ -40,19 +40,18 @@
 
 
 \RequirePackage[noabbrev, french]{cleveref}
-%\RequirePackage[frenchb]{babel}
 \RequirePackage{lastpage} % Pour référencer la dernière page dynamiquement.
 \RequirePackage{multicol} % Multicolonnes dans les tableaux
 \RequirePackage{multirow} % Multilignes dans les tableaux
 \RequirePackage{pstricks} % Créer des graphiques
 \RequirePackage{siunitx} % Unité
-\RequirePackage{dsfont}
+\RequirePackage{dsfont} % pour les blackboard letters
 \RequirePackage[normalem]{ulem}
 \RequirePackage{soul} % Pour emphaser le texte (barré, souligné, etc.)
 \RequirePackage{url} % Pour les urls
 \RequirePackage{xcolor} % Couleurs
-\RequirePackage{tikz}
-\RequirePackage{pgfplots}
+\RequirePackage{tikz} % Pour faire des dessins
+\RequirePackage{pgfplots} % Tracer des fonctions
 \RequirePackage{tikz-cd}
 \tikzcdset{arrow style=math font}
 \RequirePackage{graphicx} % Inclut les figures
@@ -85,6 +84,7 @@
 %\newcommand{\N}{\mathds{N}}
 \newcommand{\Z}{\mathds{Z}}
 %\newcommand{\C}{\mathds{C}}
+
 % Url
 \urlstyle{same}
 
@@ -104,12 +104,13 @@
 \RequirePackage{tocloft} %% Pour controler le design typographique de la table des matières
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Points dans la table des matières
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Définition de la ligne
+
+
 % Définition des couleurs
 \definecolor{darkblue}{rgb}{0.0,0.0,0.3} 
 \definecolor{rahmen}{RGB}{0,73,114}
 \definecolor{grund}{RGB}{238,241,251}          
 \definecolor{schrift}{RGB}{0,73,114}
-
 \definecolor{lightgray}{gray}{.95}
 
 
@@ -134,16 +135,4 @@
 \setkomafont{headsepline}{\color{darkblue}}
 \setkomafont{footsepline}{\color{darkblue}}
 \setkomafont{disposition}{\color{schrift}\bfseries}
-
-
-
-
-
-
-%
-%\singlespacing
-%   \begin{multicols}{2}
-%        \tableofcontents
-%    \end{multicols}
-
-
+\endinput
