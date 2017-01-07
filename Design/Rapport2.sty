@@ -1,7 +1,28 @@
-\RequirePackage[automark,autooneside=false, footwidth=\the\textwidth]{scrlayer-scrpage} % pour 
-\RequirePackage[utf8]{inputenc} 
-\RequirePackage[T1]{fontenc}
-\RequirePackage{newtxtext} % police
+\RequirePackage[automark,autooneside=false, footwidth=\the\textwidth]{scrlayer-scrpage} % pour la structure des pages (headers, etc.)
+\RequirePackage{ifluatex}
+\IfFileExists{mtpro2.sty}{
+\ifbool{luatex} { 
+   \RequirePackage[no-math]{fontspec}
+   \RequirePackage{newtxtext} % police
+ }{
+   \RequirePackage[utf8]{inputenc} 
+   \RequirePackage[T1]{fontenc}
+   \RequirePackage{newtxtext} % police
+ }
+\let\hbar\relax
+\RequirePackage[subscriptcorrection,uprightGreek,zswash,nofontinfo,amssymbols,mtphrd]{mtpro2}
+}
+{
+\ifbool{luatex} { 
+   \RequirePackage[no-math]{fontspec}
+   \RequirePackage{newtxtext} % police
+ }{
+   \RequirePackage[utf8]{inputenc} 
+   \RequirePackage[T1]{fontenc}
+   \RequirePackage{newtxtext} % police
+ }
+ \RequirePackage{newtxmath}
+}
 \RequirePackage[fleqn]{amsmath} % amsmath avec équations un peu vers la gauche
 \RequirePackage[protrusion=true,expansion,auto]{microtype} % rendre typographie plus belle
 \RequirePackage{ntheorem} % environnement théorème
@@ -14,7 +35,6 @@
 \RequirePackage{import} % importer
 \RequirePackage{cite} % citer
 \RequirePackage{booktabs} % beaux tableaux
-\RequirePackage[subscriptcorrection,uprightGreek,zswash,nofontinfo,amssymbols,mtphrd]{mtpro2}
 \RequirePackage{bm} % Vecteurs en gras
 \RequirePackage{physics} % Macros pour physiciens
 \RequirePackage{caption} % Légendes
