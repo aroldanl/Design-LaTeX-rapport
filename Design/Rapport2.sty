@@ -31,9 +31,6 @@
 \RequirePackage{etoolbox}
 \RequirePackage{tensor} % Pour afficher les tenseurs avec des espaces
 \RequirePackage{moresize}
-\let\U\relax
-\let\B\relax
-\RequirePackage{nuc}  % Afficher isotopes p. ex. \Bi{207}
 \RequirePackage[frenchb]{babel}
 \RequirePackage{import} % importer
 \RequirePackage{cite} % citer
@@ -81,16 +78,6 @@
 \RequirePackage[space]{grffile} % Permet d'ajouter graphique avec espace(s) dans le nom
 \RequirePackage{setspace} % Espace
 \pgfplotsset{compat=1.14}
-
-\makeatletter
-\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
-\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
-\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
-\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
-\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
-\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
-\makeatother
 
 
 
@@ -163,6 +150,8 @@
     linkcolor=darkblue,
     urlcolor=darkblue
 }
+
+
 \tolerance 1414
 \hbadness 1414
 \emergencystretch 1.5em
@@ -192,30 +181,22 @@
 \RequirePackage{setspace} % Espace
 \pgfplotsset{compat=1.14}
 
+
+
+
 \makeatletter
-\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
-\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
-\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
-\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
-\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
-\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\g@addto@macro\bfseries{\bm} % Titre avec les maths en gras
 \makeatother
 
 
 
-%%
-\makeatletter
-\g@addto@macro\bfseries{\boldmath}
-\makeatother
-
-
-
-% Redéfinition des ensembles usuels
+% Redéfinition des ensembles usuels + d'autres macros
 
 \newcommand{\R}{\mathds{R}}
 %\newcommand{\N}{\mathds{N}}
 \newcommand{\Z}{\mathds{Z}}
+\newcommand{\e}{\mathrm{e}} 
+\newcommand{\ii}{\mathrm{i}}
 %\newcommand{\C}{\mathds{C}}
 
 % Url
